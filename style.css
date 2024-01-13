@@ -181,16 +181,69 @@ main{
     color: #FFF;
 }
 
+
+/* facts section styles */
+
+.facts-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.facts-container h1{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+.facts-container>p{
+    color: #727272;
+    line-height: 26px;
+    width: 540px;
+    padding: 24px 0;
+}
+
+.fact-cards{
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#fact-card1, #fact-card2 ,#fact-card3 , #fact-card4{
+    box-sizing: border-box;
+    height: 240px;
+    width: 240px;
+    border: 1px solid #FF900E;
+    padding: 50px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+}
+#fact-card1>h1, #fact-card2>h1 ,#fact-card3>h1 , #fact-card4>h1{
+    color: #424242;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+#fact-card1>p, #fact-card2>p ,#fact-card3>p , #fact-card4>p{
+    color: #727272;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+
 /* media queries */
 /* for small devices */
 @media screen and (max-width: 576px){
     header{
         padding: 20px;
     }
-    nav, .features-container{
+    nav, .features-container,.facts-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 20px 0;
     }
     .banner .bannerInfo{
         width: 400px;
@@ -212,13 +265,22 @@ main{
         position: static;
         height: 100px;  
     }
+    .fact-cards{
+        width: 300px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .facts-container>p{
+        width: 90vw;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width:992px){
     header{
         padding: 20px;
     }
-    nav, .features-container{
+    nav, .features-container, .facts-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -235,5 +297,9 @@ main{
     .team-container-text{
         text-align: center;
     }
-    
+    .fact-cards{
+        width: 600px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
