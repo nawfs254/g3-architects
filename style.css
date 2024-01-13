@@ -256,10 +256,14 @@ main{
     line-height: 26px;
     text-align: center;
 }
+.sponsors-texts{
+    width: 99vw;
+}
 
 .sponsors{
     display: flex;
     justify-content: space-around;
+    gap: 100px;
 }
 
 .sponsors img{
@@ -273,7 +277,7 @@ main{
     header{
         padding: 20px;
     }
-    nav, .features-container,.facts-container{
+    nav, .features-container,.facts-container, .sponsors{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -334,6 +338,15 @@ main{
     .fact-cards{
         width: 600px;
         flex-wrap: wrap;
+        gap: 20px;
+    }
+    .sponsors{
+        width: auto;
+        height: 150px;
+        flex-wrap: wrap;
+    }
+    .sponsors>img{
+        height: 50px;
         gap: 20px;
     }
 }
